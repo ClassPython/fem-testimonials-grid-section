@@ -86,14 +86,20 @@ body{
     background-color: var(--background);
 }
 
+/* ! need to add the shadow */
+
 .main-container{
     display: grid;
     /* ? maybe use minmax */
-    grid-template-columns: 305px;
+    /* grid-template-columns: 305px; */
+
+    grid-template-columns: minmax(305px 768px);
+    /* ? have each card at set row height */
     grid-template-rows: auto;
     align-items: start;
+    /* do i need align content ?? */
     align-content: start;
-    margin: 73px 0;
+    margin: 73px 35px;
     row-gap: var(--spacing-200);
 }
 
@@ -192,5 +198,58 @@ color: var(--white);
 .five{
     background-color: var(--white);
     color: var(--grey-500);
+
+}
+
+
+/* Tablet */
+/* ? up date to em's */
+@media screen and (min-width:768px){
+
+    .main-container{
+/* ? 2 columns and 4 rows */
+        /* 83 */
+        /* 60 l */
+        /* 61 r */
+        /* grid-template-columns: minmax(768px 1440px); */
+        grid-template-columns: repeat(2, 323.5px);
+        /* ? have each card at set row height */
+        grid-template-rows: auto;
+        /* align-items: start; */
+        /* do i need align content ?? */
+        /* align-content: start; */
+        margin: 83px 61px 83px 60px;
+        row-gap: var(--spacing-200);
+        column-gap: var(--spacing-200);
+    }
+
+    .one{
+      grid-column: 1/3;
+      grid-row: 1;
+    }
+    
+    .two{
+        grid-column: 1;
+      grid-row: 2;
+
+    }
+
+    .three{
+        grid-column: 2;
+      grid-row: 2;
+
+    }
+
+    .four{
+        grid-column: 1/3;
+      grid-row: 3;
+
+    }
+
+    .five{
+        grid-column: 1/3;
+      grid-row: 4;
+
+    }
 
 }
