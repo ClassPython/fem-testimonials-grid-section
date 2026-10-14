@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* 16px */
+    font-size: 100%;
+
+    /* Colors */
+    /* ### Primary */
+
+--purple-50: hsl(261, 100%, 95%);
+--purple-300: hsl(264, 82%, 80%);
+--purple-500: hsl(263, 55%, 52%);
+
+/* ### Neutral */
+
+--white: hsl(0, 0%, 100%);
+--grey-100: hsl(214, 17%, 92%);
+--grey-200: hsl(0, 0%, 81%);
+--grey-400: hsl(224, 10%, 45%);
+--grey-500: hsl(217, 19%, 35%);
+--dark-blue: hsl(219, 29%, 14%);
+--black: hsl(0, 0%, 7%);
+--background: hsl(300, 5%, 96%);
+
+/* --------  Body ----------- */
+    --font-size-body:0.8125rem; /*  13px (13/16) */
+    --line-height-body:1.5;  
+
+
+/* Typography */
+
+--main-font: 'Barlow Semi Condensed', sans-serif;
+
+/* text preset I */
+/* 20px 120% 0 letter spacing - Barlow Semi Condensed Semibold */
+--h1-font-size:1.25rem;
+--h1-font-weight:600;
+--h1-line-height:1.2;
+--h1-letter-spacing:0;
+
+/* text preset II */
+/* 13px 110% 0 letter spacing - Barlow Semi Condensed Medium */
+--h2-font-size:.8125rem;
+--h2-font-weight:500;
+--h2-line-height:1.1;
+--h2-letter-spacing:0;
+
+/* text preset III */
+/* 13px 140% 0 letter Spacing - Barlow Semi Condensed Medium */
+--h3-font-size:.8125rem;
+--h3-font-weight:500;
+--h3-line-height:1.4;
+--h3-letter-spacing:0;
+
+/* text preset IV */
+/* 11px 110% 0 letter Spacing - Barlow Semi Condensed Medium */
+--h4-font-size:.6875rem;
+--h4-font-weight:500;
+--h4-line-height:1.1;
+--h4-letter-spacing:0;
+
+/* Spacing */
+/* based on 16px */
+--spacing-250:2.5rem; /* 40px */
+--spacing-200:2rem;  /* 32px */
+--spacing-150:1.5rem;  /* 24px */
+--spacing-100:1rem; /* 16px */
+--spacing-50:.5rem;/* 8px */
+--spacing-25:.25rem; /* 4px */
+}
+
+body{
+    font-family: var(--main-font);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    /* ------------------------ */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100svh;
+    align-items: center;
+    background-color: var(--background);
+}
+
+.main-container{
+    display: grid;
+    /* ? maybe use minmax */
+    grid-template-columns: 305px;
+    grid-template-rows: auto;
+    align-items: start;
+    align-content: start;
+    margin: 73px 0;
+    row-gap: var(--spacing-200);
+}
+
+/* cards are 32 padding */
+/* radius 8px */
+/* row gap 16px */
+.card{
+    display: grid;
+    padding: var(--spacing-200);
+    row-gap: var(--spacing-100);
+    border-radius: var(--spacing-50);
+    width: 100%;
+
+}
+
+.profile{
+    /* grid */
+    /* col gap 17 px */
+    /* 2 col */
+    /* 2 rows */
+    /* avatar is col 1 row 1 and 2 */
+    /* name is col 2 row 1 */
+    /* verified is col 2 row 2 */
+    display: grid;
+    column-gap: 17px;
+    grid-template-columns: 28px 1fr;
+    grid-template-rows: repeat(2, 15px);
+}
+
+/* a775F1 */
+img{
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--purple-300);
+    grid-column: 1;
+    grid-row: 1/2;
+}
+
+.name{
+    font-size: var(--h2-font-size);
+    font-weight: var(--h2-font-weight);
+    letter-spacing: var(--h2-letter-spacing);
+    line-height: var(--h2-line-height);
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.verified{
+    font-size: var(--h4-font-size);
+    font-weight: var(--h4-font-weight);
+    letter-spacing: var(--h4-letter-spacing);
+    line-height: var(--h4-line-height);
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.testimonial{
+    font-size: var(--h1-font-size);
+    font-weight: var(--h1-font-weight);
+    letter-spacing: var(--h1-letter-spacing);
+    line-height: var(--h1-line-height);
+}
+
+.background{
+    font-size: var(--h3-font-size);
+    font-weight: var(--h3-font-weight);
+    letter-spacing: var(--h3-letter-spacing);
+    line-height: var(--h3-line-height);
+}
+
+.one{
+background-color: var(--purple-500);
+color: var(--white);
+/* height: 450px; */
+}
+
+.two{
+    background-color: var(--grey-500);
+    color: var(--white);
+
+}
+
+.three{
+    background-color: var(--white);
+    color: var(--grey-500);
+
+}
+
+.four{
+    background-color: var(--dark-blue);
+    color: var(--white);
+
+}
+
+.five{
+    background-color: var(--white);
+    color: var(--grey-500);
+
+}
