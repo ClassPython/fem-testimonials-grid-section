@@ -12,6 +12,7 @@
     /* ### Primary */
 
 --purple-50: hsl(261, 100%, 95%);
+--purple-200: hsl(264, 82%, 70%); /* A775F1*/
 --purple-300: hsl(264, 82%, 80%);
 --purple-500: hsl(263, 55%, 52%);
 
@@ -20,6 +21,7 @@
 --white: hsl(0, 0%, 100%);
 --grey-100: hsl(214, 17%, 92%);
 --grey-200: hsl(0, 0%, 81%);
+--grey-300: hsl(215, 10%, 67%);
 --grey-400: hsl(224, 10%, 45%);
 --grey-500: hsl(217, 19%, 35%);
 --dark-blue: hsl(219, 29%, 14%);
@@ -87,12 +89,12 @@ body{
 }
 
 /* ! need to add the shadow */
+/* ! need to add quotation in purple */
+/* !   convert to em's and rem's*/
 
 .main-container{
     display: grid;
     /* ? maybe use minmax */
-    /* grid-template-columns: 305px; */
-
     grid-template-columns: minmax(305px 767px);
     /* ? have each card at set row height */
     grid-template-rows: auto;
@@ -111,32 +113,47 @@ body{
     padding: var(--spacing-200);
     row-gap: var(--spacing-100);
     border-radius: var(--spacing-50);
-    /* width: 100%; */
+
+    /* ------------------ */
+
+     /* background: #ffffff; */
+  /* border-radius: 16px; */
+
+ /* offset-x, offset-y, blur-radius, spread-radius, color */
+  /* box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+              0 8px 10px -6px rgba(0, 0, 0, 0.05); */
+
+
+
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+    0 8px 10px -6px rgba(0, 0, 0, 0.4);
+
+
+    /* transform: translateY(-4px); */
+  /* box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 
+              0 8px 10px -6px rgba(0, 0, 0, 0.08); */
+
+  /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+              0 2px 4px -2px rgba(0, 0, 0, 0.05);  */
 
 }
 
 .profile{
-    /* grid */
-    /* col gap 17 px */
-    /* 2 col */
-    /* 2 rows */
-    /* avatar is col 1 row 1 and 2 */
-    /* name is col 2 row 1 */
-    /* verified is col 2 row 2 */
     display: grid;
     column-gap: 17px;
     grid-template-columns: 28px 1fr;
     grid-template-rows: repeat(2, 15px);
 }
 
-/* a775F1 */
 img{
     height: 28px;
     width: 28px;
+    margin-top:.5px ;
     border-radius: 50%;
-    border: 2px solid var(--purple-300);
     grid-column: 1;
     grid-row: 1/2;
+    object-fit: cover;
 }
 
 .name{
@@ -146,6 +163,7 @@ img{
     line-height: var(--h2-line-height);
     grid-column: 2;
     grid-row: 1;
+    align-self: flex-start;
 }
 
 .verified{
@@ -155,6 +173,7 @@ img{
     line-height: var(--h4-line-height);
     grid-column: 2;
     grid-row: 2;
+    align-self: flex-end;
 }
 
 .testimonial{
@@ -169,37 +188,99 @@ img{
     font-weight: var(--h3-font-weight);
     letter-spacing: var(--h3-letter-spacing);
     line-height: var(--h3-line-height);
+    width: fit-content;
 }
 
+/* Card one */
 .one{
-background-color: var(--purple-500);
-color: var(--white);
-/* height: 450px; */
+    background-color: var(--purple-500);
+    color: var(--white);
+    height: 450px;
 }
 
+.one img{
+    box-shadow: 0 0 0 2px var(--purple-200); 
+}
+
+.one .verified{
+    color: var(--purple-50);
+}
+
+.one .background{
+    color: var(--purple-50);
+}
+
+/* Card two */
 .two{
     background-color: var(--grey-500);
     color: var(--white);
-
-
+    height: 246px;
 }
 
+.two .verified{
+    color: var(--grey-300);
+}
+
+.two .background{
+    color: var(--grey-100);
+}
+
+/* Card three */
 .three{
     background-color: var(--white);
     color: var(--grey-500);
-
+    height: 226px;
 }
 
+.three .verified{
+    color: var(--grey-400);
+}
+
+.three .background{
+    color: var(--grey-400);
+}
+
+/* Card four */
 .four{
     background-color: var(--dark-blue);
     color: var(--white);
-
+    height: 414px;
 }
 
+.four img{
+    box-shadow: 0 0 0 2px var(--purple-500);
+}
+
+.four .testimonial{
+    color: var(--grey-200);
+}
+
+.four .background{
+    color: var(--grey-100);
+}
+
+/* Card five */
 .five{
     background-color: var(--white);
     color: var(--grey-500);
+    /* height: 503px; */
+}
 
+.five .verified{
+    color: var(--grey-300);
+}
+
+.five .background{
+    color: var(--grey-400);
+}
+
+/* Grid sub-sections  */
+.ignore-one{
+    display: contents;
+}
+
+.ignore-two{
+display: contents;
 }
 
 
@@ -213,15 +294,9 @@ color: var(--white);
         /* 60 l */
         /* 61 r */
         /* 113 */
-        /* grid-template-columns: minmax(repeat(2, 323.5px) repeat(2, 720px)); */
         grid-template-columns: minmax(repeat(2, 307.5px) repeat(2, 720px));
-        /* grid-template-columns: repeat(2, 323.5px); */
         /* ? have each card at set row height */
         grid-template-rows: auto;
-        /* align-items: start; */
-        /* do i need align content ?? */
-        /* align-content: start; */
-        /* margin: 83px 61px 83px 60px; */
         margin: 83px 61px 113px 60px;
         row-gap: var(--spacing-200);
         column-gap: var(--spacing-200);
@@ -230,46 +305,52 @@ color: var(--white);
     .one{
       grid-column: 1/3;
       grid-row: 1;
+      height: 270px;
+       background-image: url('../images/bg-pattern-quotation.svg');
+    background-size: 105px 102px; 
+    background-position: left 375px top;/* Centers the image */
+    background-repeat: no-repeat;  /* Prevents the image from tiling */
     }
     
     .two{
       grid-column: 1/2;
       grid-row: 2/3;
-      /* min-width: 0; */
-      /* min-height: 0; Use this if it's overflowing vertically */
-      /* align-self: stretch; */
-      /* justify-self: stretch; */
-      /* word-break: break-word; */
-  /* overflow-wrap: break-word; */
-       /* max-width: 307.5; */
      min-width: 307.5px;
+     height: 246px;
+    }
+
+    .two .verified{
+        color: var(--grey-100);
     }
 
     .three{
       grid-column: 2/3;
       grid-row: 2/3;
-      align-self: stretch;
-      /* width: 100%; */
-      /* justify-self: stretch; */
       min-width: 307.5px;
-
+      height: 246px;
     }
 
     .four{
         grid-column: 1/3;
       grid-row: 3;
+      height:270px;
 
     }
 
     .five{
         grid-column: 1/3;
       grid-row: 4;
+      height: 275px;
 
     } 
 
+    .five .verified{
+        color: var(--grey-400);
+    }
+
 }
 
-
+/* Desktop */
 /* ? convert to em's */
 @media screen and (min-width:1440px){
     
@@ -287,76 +368,76 @@ color: var(--white);
         /* 1114 total */
         /* need 3 32px gaps = 96 */
         /* 1114 - 96 = 1018 */
-row-gap: var(--spacing-200);
-        column-gap: 0;
-        row-gap: 24px;
-        /* card sizes by row */
-        /* row 1   540 32 255 32 255*/
-        /* row 1   255 32 540 32 255*/
-        
-        grid-template-columns: repeat(74, 15px);
-        /* grid-template-columns: auto auto auto; */
-        /* grid-template-columns: repeat(2, 323.5px); */
+
+row-gap: var(--spacing-150);
+        column-gap: 32px;
+        row-gap: var(--spacing-150);
+        grid-template-columns: 827px 255px;
         /* ? have each card at set row height */
 
-        grid-template-rows: 288px 269px;
-        /* grid-template-rows: auto auto; */
+        grid-template-rows: 288px 270px;
         margin: 83px 61px 113px 60px;
     }
 
+    .ignore-one{
+        grid-column: 1;
+        grid-row: 1/2;
+        /* ------ */
+        display: grid;
+
+        grid-template-columns: 540px 255px; 
+        grid-template-rows: 288px;
+
+        column-gap: var(--spacing-200);
+    }
+
+    .ignore-two{
+        grid-column: 1;
+        grid-row: 2/3;
+        /* ------ */
+        display: grid;
+
+        grid-template-columns: 255px 540px;
+        grid-template-rows: 269px;
+
+        column-gap: var(--spacing-200);
+    }
+
     .one{
-        grid-column: 1/37;
-        /* grid-column: 1/3; */
+        grid-column: 1;
         grid-row: 1;
-        width: 540px;
         height:288px ;
-        margin-right: var(--spacing-200);
     }
     
     .two{
-        /* grid-column: 37/54; */
-        grid-column: 39/56;
-        /* grid-column: 3/3; */
+        grid-column: 2;
         grid-row: 1;
         width: 255px;
         min-width: unset;
         height: 288px;
-        margin-right: var(--spacing-200);
-
     }
 
     .three{
         width: 255px;
         min-width:unset;
         height: 269px;
-        grid-column: 1/18;
-        /* grid-column: 1/1; */
-        grid-row: 2;
-        /* justify-self: normal; */
-        /* width: 100%; */
-
+        grid-column: 1;
+        grid-row: 1;
     }
 
     .four{
         width: 540px;
         height:269px ;
-
-        /* grid-column: 2/3; */
-        grid-column: 20/56;
-        grid-row: 2; 
-
+        grid-column: 2;
+        grid-row: 1;
     }
 
     .five{
         width: 255px;
         height: 582px;
-        /* grid-column: 54/71; */
-        grid-column: 58/75;
-        /* grid-column: 4/4; */
+        grid-column: 2;
         grid-row: 1/3;
         color:var(--grey-400);
-        /* align-self: stretch; */
-
     }
 
 }
