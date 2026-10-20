@@ -113,7 +113,7 @@ body{
     grid-template-rows: repeat(2, 15px);
 }
 
-img{
+.profile img{
     height: 28px;
     width: 28px;
     margin-top:.5px ;
@@ -355,7 +355,6 @@ display: contents;
 .main-container{
     row-gap: var(--spacing-150);
     column-gap: 32px;
-    row-gap: var(--spacing-150);
     grid-template-columns: 827px 255px;
     grid-template-rows: 288px 270px;
     margin: 83px 61px 113px 60px;
