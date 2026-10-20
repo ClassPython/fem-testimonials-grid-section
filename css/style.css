@@ -85,8 +85,6 @@ body{
     background-color: var(--background);
 }
 
-/* !   convert to em's and rem's*/
-
 .main-container{
     display: grid;
     grid-template-columns: minmax(305px, 767px);
@@ -247,7 +245,7 @@ display: contents;
 }
 
 
-@media (width:375px){
+@media (width:23.4375em){
 
 .one .background{
     height: 180px;    
@@ -271,7 +269,7 @@ display: contents;
 
 }
 
-@media (width:768px){
+@media (width:48em){
 
 .one .background{
     height: 72px;    
@@ -297,8 +295,7 @@ display: contents;
 
 
 /* Tablet */
-/* ? up date to em's */
-@media screen and (min-width:768px){
+@media screen and (min-width:48em){
 
 .main-container{
     grid-template-columns: repeat(2, 1fr);
@@ -353,15 +350,13 @@ display: contents;
 
 
 /* Desktop */
-/* ? convert to em's */
-@media screen and (min-width:1440px){
+@media screen and (min-width:90em){
     
 .main-container{
     row-gap: var(--spacing-150);
     column-gap: 32px;
     row-gap: var(--spacing-150);
     grid-template-columns: 827px 255px;
-    /* ? have each card at set row height */
     grid-template-rows: 288px 270px;
     margin: 83px 61px 113px 60px;
 }
