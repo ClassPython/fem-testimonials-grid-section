@@ -10,69 +10,66 @@
 
     /* Colors */
     /* ### Primary */
+    --purple-50: hsl(261, 100%, 95%);
+    --purple-200: hsl(264, 82%, 70%); /* A775F1*/
+    --purple-300: hsl(264, 82%, 80%);
+    --purple-500: hsl(263, 55%, 52%);
 
---purple-50: hsl(261, 100%, 95%);
---purple-200: hsl(264, 82%, 70%); /* A775F1*/
---purple-300: hsl(264, 82%, 80%);
---purple-500: hsl(263, 55%, 52%);
+    /* ### Neutral */
+    --white: hsl(0, 0%, 100%);
+    --grey-100: hsl(214, 17%, 92%);
+    --grey-200: hsl(0, 0%, 81%);
+    --grey-300: hsl(215, 10%, 67%);
+    --grey-400: hsl(224, 10%, 45%);
+    --grey-500: hsl(217, 19%, 35%);
+    --dark-blue: hsl(219, 29%, 14%);
+    --black: hsl(0, 0%, 7%);
+    --background: hsl(300, 5%, 96%);
 
-/* ### Neutral */
-
---white: hsl(0, 0%, 100%);
---grey-100: hsl(214, 17%, 92%);
---grey-200: hsl(0, 0%, 81%);
---grey-300: hsl(215, 10%, 67%);
---grey-400: hsl(224, 10%, 45%);
---grey-500: hsl(217, 19%, 35%);
---dark-blue: hsl(219, 29%, 14%);
---black: hsl(0, 0%, 7%);
---background: hsl(300, 5%, 96%);
-
-/* --------  Body ----------- */
+    /* --------  Body ----------- */
     --font-size-body:0.8125rem; /*  13px (13/16) */
     --line-height-body:1.5;  
 
 
-/* Typography */
+    /* Typography */
+    --main-font: 'Barlow Semi Condensed', sans-serif;
 
---main-font: 'Barlow Semi Condensed', sans-serif;
+    /* text preset I */
+    /* 20px 120% 0 letter spacing - Barlow Semi Condensed Semibold */
+    --h1-font-size:1.25rem;
+    --h1-font-weight:600;
+    --h1-line-height:1.2;
+    --h1-letter-spacing:0;
 
-/* text preset I */
-/* 20px 120% 0 letter spacing - Barlow Semi Condensed Semibold */
---h1-font-size:1.25rem;
---h1-font-weight:600;
---h1-line-height:1.2;
---h1-letter-spacing:0;
+    /* text preset II */
+    /* 13px 110% 0 letter spacing - Barlow Semi Condensed Medium */
+    --h2-font-size:.8125rem;
+    --h2-font-weight:500;
+    --h2-line-height:1.1;
+    --h2-letter-spacing:0;
 
-/* text preset II */
-/* 13px 110% 0 letter spacing - Barlow Semi Condensed Medium */
---h2-font-size:.8125rem;
---h2-font-weight:500;
---h2-line-height:1.1;
---h2-letter-spacing:0;
+    /* text preset III */
+    /* 13px 140% 0 letter Spacing - Barlow Semi Condensed Medium */
+    --h3-font-size:.8125rem;
+    --h3-font-weight:500;
+    --h3-line-height:1.4;
+    --h3-letter-spacing:0;
 
-/* text preset III */
-/* 13px 140% 0 letter Spacing - Barlow Semi Condensed Medium */
---h3-font-size:.8125rem;
---h3-font-weight:500;
---h3-line-height:1.4;
---h3-letter-spacing:0;
+    /* text preset IV */
+    /* 11px 110% 0 letter Spacing - Barlow Semi Condensed Medium */
+    --h4-font-size:.6875rem;
+    --h4-font-weight:500;
+    --h4-line-height:1.1;
+    --h4-letter-spacing:0;
 
-/* text preset IV */
-/* 11px 110% 0 letter Spacing - Barlow Semi Condensed Medium */
---h4-font-size:.6875rem;
---h4-font-weight:500;
---h4-line-height:1.1;
---h4-letter-spacing:0;
-
-/* Spacing */
-/* based on 16px */
---spacing-250:2.5rem; /* 40px */
---spacing-200:2rem;  /* 32px */
---spacing-150:1.5rem;  /* 24px */
---spacing-100:1rem; /* 16px */
---spacing-50:.5rem;/* 8px */
---spacing-25:.25rem; /* 4px */
+    /* Spacing */
+    /* based on 16px */
+    --spacing-250:2.5rem; /* 40px */
+    --spacing-200:2rem;  /* 32px */
+    --spacing-150:1.5rem;  /* 24px */
+    --spacing-100:1rem; /* 16px */
+    --spacing-50:.5rem;/* 8px */
+    --spacing-25:.25rem; /* 4px */
 }
 
 body{
@@ -92,20 +89,15 @@ body{
 
 .main-container{
     display: grid;
-    /* ? maybe use minmax */
-    grid-template-columns: minmax(305px 767px);
-    /* ? have each card at set row height */
+    grid-template-columns: minmax(305px, 767px);
     grid-template-rows: auto;
-    align-items: start;
-    /* do i need align content ?? */
-    align-content: start;
+    /* align-items: start; */
+    /* ? do i need align content ?? */
+    /* align-content: start; */
     margin: 73px 35px;
     row-gap: var(--spacing-200);
 }
 
-/* cards are 32 padding */
-/* radius 8px */
-/* row gap 16px */
 .card{
     display: grid;
     padding: var(--spacing-200);
@@ -174,7 +166,6 @@ img{
 .one{
     background-color: var(--purple-500);
     color: var(--white);
-    /* height: 450px; */
 }
 
 .one img{
@@ -258,215 +249,187 @@ img{
 display: contents;
 }
 
-/* .inner-group{
-    display: contents;
-} */
-
 
 @media (width:375px){
-    .one .background{
-       height: 180px;    
-    }
-    .two .background{  
-        height: 72px;
 
-    }
-    .three .background{
-        height: 54px;
+.one .background{
+    height: 180px;    
+}
 
-    }
-    .four .background{
-        height: 144px;
-    }
-    .five .background{ 
-        height: 306px;
+.two .background{  
+    height: 72px;
+}
 
-    }
+.three .background{
+    height: 54px;
+}
+
+.four .background{
+    height: 144px;
+}
+
+.five .background{ 
+    height: 306px;
+}
+
 }
 
 @media (width:768px){
-    .one .background{
-       height: 72px;    
-    }
 
-    .two .background{  
-        height: 72px
-    }
-
-    .three .background{
-        height: 54px;
-    }
-
-    .four .background{
-        height: 72px;
-    }
-    
-    .five .background{ 
-        height: 126px;
-    }
+.one .background{
+    height: 72px;    
 }
 
+.two .background{  
+    height: 72px
+}
 
+.three .background{
+    height: 54px;
+}
+
+.four .background{
+    height: 72px;
+}
+    
+.five .background{ 
+    height: 126px;
+}
+
+}
 
 
 /* Tablet */
 /* ? up date to em's */
 @media screen and (min-width:768px){
 
-    .main-container{
-/* ? 2 columns and 4 rows */
-        /* 83 */
-        /* 60 l */
-        /* 61 r */
-        /* 113 */
-        grid-template-columns: minmax(repeat(2, 307.5px) repeat(2, 720px));
-        /* ? have each card at set row height */
-        grid-template-rows: auto;
-        margin: 83px 61px 113px 60px;
-        row-gap: var(--spacing-200);
-        column-gap: var(--spacing-200);
-    }
+.main-container{
+    /* grid-template-columns: minmax(repeat(2, 307.5px), repeat(2, 720px)); */
+    /* grid-template-columns: repeat(2, minmax(307.5px, 720px)); */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin: 83px 61px 113px 60px;
+    row-gap: var(--spacing-200);
+    column-gap: var(--spacing-200);
+}
 
-    .one{
-      grid-column: 1/3;
-      grid-row: 1;
-      /* height: 270px; */
-       background-image: url('../images/bg-pattern-quotation.svg');
+.one{
+    grid-column: 1/3;
+    grid-row: 1;
+    background-image: url('../images/bg-pattern-quotation.svg');
     background-size: 105px 102px; 
     background-position: left 375px top;/* Centers the image */
     background-repeat: no-repeat;  /* Prevents the image from tiling */
-    }
+}
     
-  
+.two{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    min-width: 307.5px;
+    min-height: 246px;
+}
 
-    .two{
-      grid-column: 1/2;
-      grid-row: 2/3;
-     min-width: 307.5px;
-     min-height: 246px;
-    }
+.two .verified{
+    color: var(--grey-100);
+}
 
-    .two .verified{
-        color: var(--grey-100);
-    }
+.three{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    min-width: 307.5px;
+    min-height: 246px;
+}
 
-    .three{
-      grid-column: 2/3;
-      grid-row: 2/3;
-      min-width: 307.5px;
-      min-height: 246px;
-    }
+.four{
+    grid-column: 1/3;
+    grid-row: 3;
+}
 
+.five{
+    grid-column: 1/3;
+    grid-row: 4;
+} 
 
-    .four{
-        grid-column: 1/3;
-      grid-row: 3;
-
-    }
-
-    .five{
-        grid-column: 1/3;
-      grid-row: 4;
-    } 
-
-    .five .verified{
-        color: var(--grey-400);
-    }
+.five .verified{
+    color: var(--grey-400);
+}
 
 }
 
 
-
 /* Desktop */
-
-
 /* ? convert to em's */
 @media screen and (min-width:1440px){
     
-    .main-container{
+.main-container{
+    row-gap: var(--spacing-150);
+    column-gap: 32px;
+    row-gap: var(--spacing-150);
+    grid-template-columns: 827px 255px;
+    /* ? have each card at set row height */
+    grid-template-rows: 288px 270px;
+    margin: 83px 61px 113px 60px;
+}
 
-        /* 2 rows  */
-        
-        /* margins */
-        /* 229 */
-        /* 165 l */
-        /* 161 r */
-        /* 218 */
+.outer-group-one{
+    grid-column: 1;
+    grid-row: 1/2;
+    /* ------ */
+    display: grid;
 
-        /* columns */
-        /* 1114 total */
-        /* need 3 32px gaps = 96 */
-        /* 1114 - 96 = 1018 */
+    grid-template-columns: 540px 255px; 
+    grid-template-rows: 288px;
 
-row-gap: var(--spacing-150);
-        column-gap: 32px;
-        row-gap: var(--spacing-150);
-        grid-template-columns: 827px 255px;
-        /* ? have each card at set row height */
+    column-gap: var(--spacing-200);
+}
 
-        grid-template-rows: 288px 270px;
-        margin: 83px 61px 113px 60px;
-    }
+.outer-group-two{
+    grid-column: 1;
+    grid-row: 2/3;
+    /* ------ */
+    display: grid;
 
-    .outer-group-one{
-        grid-column: 1;
-        grid-row: 1/2;
-        /* ------ */
-        display: grid;
+    grid-template-columns: 255px 540px;
+    grid-template-rows: 269px;
 
-        grid-template-columns: 540px 255px; 
-        grid-template-rows: 288px;
+    column-gap: var(--spacing-200);
+}
 
-        column-gap: var(--spacing-200);
-    }
-
-    .outer-group-two{
-        grid-column: 1;
-        grid-row: 2/3;
-        /* ------ */
-        display: grid;
-
-        grid-template-columns: 255px 540px;
-        grid-template-rows: 269px;
-
-        column-gap: var(--spacing-200);
-    }
-
-    .one{
-        grid-column: 1;
-        grid-row: 1;
-        height:288px ;
-    }
+.one{
+    grid-column: 1;
+    grid-row: 1;
+    height:288px ;
+}
     
-    .two{
-        grid-column: 2;
-        grid-row: 1;
-        width: 255px;
-        min-width: unset;
-        height: 288px;
-    }
+.two{
+    grid-column: 2;
+    grid-row: 1;
+    width: 255px;
+    min-width: unset;
+    height: 288px;
+}
 
-    .three{
-        width: 255px;
-        min-width:unset;
-        height: 269px;
-        grid-column: 1;
-        grid-row: 1;
-    }
+.three{
+    width: 255px;
+    min-width:unset;
+    height: 269px;
+    grid-column: 1;
+    grid-row: 1;
+}
 
-    .four{
-        width: 540px;
-        height:269px ;
-        grid-column: 2;
-        grid-row: 1;
-    }
+.four{
+    width: 540px;
+    height:269px ;
+    grid-column: 2;
+    grid-row: 1;
+}
 
-    .five{
-        width: 255px;
-        height: 582px;
-        grid-column: 2;
-        grid-row: 1/3;
-        color:var(--grey-400);
-    }
+.five{
+    width: 255px;
+    height: 582px;
+    grid-column: 2;
+    grid-row: 1/3;
+    color:var(--grey-400);
+}
 
 }
