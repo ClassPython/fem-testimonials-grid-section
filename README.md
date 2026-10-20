@@ -27,13 +27,9 @@ This challenge required knowledge of CSS, Grid, semantic HTML, and responsive we
 ### What I learned
 
  - The biggest challenge was rearranging the card order while dynamically updating each card's size.
-
 - This was solved by utilizing CSS Grid, display: contents, and media queries.
-
 - CSS Grid allowed for the precise placement of cards within designated containers.
-
 - display: contents effectively allowed for the removal or appearance of containers in the layout while leaving their child cards fully intact in the DOM.
-
 - Media queries enabled dynamic control of display: contents and the grid layout to reposition cards based on screen size.
 
 
