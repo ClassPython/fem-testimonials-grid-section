@@ -2,15 +2,15 @@
 
 ## Overview
 
-For this challenge, I built and deployed Frontend Mentor's Testimonial Grid Section. They provided all the necessary assets, including the images, a Figma file, and a comprehensive style guide.
+For this challenge, I built and deployed Frontend Mentor's Testimonials grid section. They provided all the necessary assets, including the images, a Figma file, and a comprehensive style guide.
 
-[Frontend Mentor Testimonial grid section challenge](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7)
+[Frontend Mentor Testimonials grid section challenge](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7)
 
 This challenge required knowledge of CSS, Grid, semantic HTML, and responsive web design.
 
 ### Screenshot
 
-![Preview of solution for the Testimonial grid section coding challenge](./images/screenshot-testimonials-grid-section.jpg)
+![Preview of solution for the Testimonials grid section coding challenge](./images/screenshot-testimonials-grid-section.jpg)
 
 
 ### Links
