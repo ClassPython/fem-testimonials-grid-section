@@ -91,9 +91,6 @@ body{
     display: grid;
     grid-template-columns: minmax(305px, 767px);
     grid-template-rows: auto;
-    /* align-items: start; */
-    /* ? do i need align content ?? */
-    /* align-content: start; */
     margin: 73px 35px;
     row-gap: var(--spacing-200);
 }
@@ -304,8 +301,6 @@ display: contents;
 @media screen and (min-width:768px){
 
 .main-container{
-    /* grid-template-columns: minmax(repeat(2, 307.5px), repeat(2, 720px)); */
-    /* grid-template-columns: repeat(2, minmax(307.5px, 720px)); */
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     margin: 83px 61px 113px 60px;
