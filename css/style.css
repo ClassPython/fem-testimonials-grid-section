@@ -93,6 +93,18 @@ body{
     row-gap: var(--spacing-200);
 }
 
+/* .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+} */
+
 .card{
     display: grid;
     padding: var(--spacing-200);
@@ -241,56 +253,62 @@ body{
 }
 
 .outer-group-two{
-display: contents;
+    display: contents;
 }
 
 
- @media (min-width: 23.4375em) and (max-width: 23.4375em){
+ @media screen and (min-width: 23.4375em){
 
 .one .background{
-    height: 180px;    
+    height: calc(180px - (100vw - 23.4375em));
+    min-height: 180px;   
 }
 
 .two .background{  
-    height: 72px;
+    height: calc(72px - (100vw - 23.4375em));
+    min-height: 72px;
 }
 
 .three .background{
-    height: 54px;
+    height: calc(54px - (100vw - 23.4375em));
+    min-height: 54px;
 }
 
 .four .background{
-    height: 144px;
+    height: calc(144px - (100vw - 23.4375em));
+    min-height: 144px;
 }
 
 .five .background{ 
-    height: 306px;
+    height: calc(306px - (100vw - 29em));
 }
 
 }
 
-@media (min-width: 48em) and (max-width: 48em) {
- 
+@media screen and (min-width:28.75rem){
+
 .one .background{
-    height: 72px;    
+    min-height: fit-content;   
 }
-    
+
 .two .background{  
-    height: 72px
+    min-height: fit-content;
 }
-    
+
 .three .background{
-    height: 54px;
+    min-height: fit-content;
 }
-    
+
 .four .background{
-    height: 72px;
+    min-height: fit-content;
 }
-        
-.five .background{ 
-    height: 126px;
+
+.five .background{
+    min-height:fit-content ;
 }
+
 }
+
 
 /* Tablet */
 @media screen and (min-width:48em){
@@ -344,6 +362,57 @@ display: contents;
     color: var(--grey-400);
 }
 
+/* -- adjust background class of each card --- */
+.one .background{
+    height: calc(72px - (100vw - 48em));
+    min-height: 72px;  
+}
+    
+.two .background{  
+    height: calc(72px - (100vw - 48em));
+    min-height: 72px;
+}
+    
+.three .background{
+    height: calc(54px - (100vw - 48em));
+    min-height: 54px;
+}
+    
+.four .background{
+    height: calc(72px - (100vw - 48em));
+    min-height:72px;
+}
+        
+.five .background{ 
+    height: calc(126px - (100vw - 48em));
+    min-height: 126px;    
+}
+
+}
+
+@media screen and (min-width:56.25rem){
+
+.one .background{
+    min-height: fit-content;   
+}
+
+.two .background{  
+    min-height: fit-content;
+}
+
+.three .background{
+    min-height: fit-content;
+}
+
+.four .background{
+    min-height: fit-content;
+}
+
+.five .background{
+    min-height:fit-content ;
+
+}
+    
 }
 
 
@@ -353,9 +422,9 @@ display: contents;
 .main-container{
     row-gap: var(--spacing-150);
     column-gap: var(--spacing-200);
-    grid-template-columns: minmax(0, 2fr) minmax(15rem, 1fr);
+    grid-template-columns: minmax(0rem, 2fr) minmax(15rem, 15.9375rem);
     grid-template-rows: 288px 270px;
-    margin: 83px 61px 113px 60px;
+    margin: 229px 161px 218px 165px;
     max-width: 1440px;
 }
 
@@ -419,5 +488,6 @@ display: contents;
     grid-row: 1/3;
     color:var(--grey-400);
 }
+
 
 }
